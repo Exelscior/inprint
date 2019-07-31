@@ -3,7 +3,7 @@
 from os import path
 from io import open
 from setuptools import setup, find_packages
-from iprint import get_version
+from inprint import get_version
 
 HERE = path.abspath(path.dirname(__file__))
 
@@ -11,13 +11,13 @@ with open(path.join(HERE, 'README.rst'), encoding='utf-8') as f:
     LONG_DESCRIPTION=f.read()
 
 if __name__ == '__main__':
-    setup(name='iprint',
+    setup(name='inprint',
           version=get_version(),
           description='A small python module for printing with colours.',
           long_description=LONG_DESCRIPTION,
           author='Joshua Logan',
           author_email='joshua.logan@eveco.re',
-          url='https://github.com/Exelscior/iprint',
+          url='https://github.com/Exelscior/inprint',
           packages=find_packages(),
           license='GPL',
           keywords='colour color print utils',

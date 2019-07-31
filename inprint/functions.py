@@ -13,7 +13,7 @@ def iprint(
 
     Uses a concatenation formatting syntax, for example:
 
-      >>> from iprint import iprint
+      >>> from inprint import iprint
       >>> iprint('[b]This text will print in blue.[/]')
       >>> iprint('[*][r]This text will print in bold and red.[/]')
       >>> iprint('[*][r]Bold red text: [/][y]Non-bold yellow text, [b]blue text, [*]bold blue text.[/]')
