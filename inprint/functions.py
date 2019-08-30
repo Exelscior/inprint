@@ -4,9 +4,9 @@ import sys
 def iprint(
     imput: str,
     autoclose: bool = True,
-    autoprint: str = True,
-    clean=False,
-    file=sys.stdout,
+    autoprint: bool = True,
+    clean: bool = False,
+    file: "io.TextIOWrapper" = sys.stdout,
 ):
     """
     Utility function that provides interactive prints with unicode activated curses manipulation
@@ -22,7 +22,7 @@ def iprint(
     :param autoclose: bool: Defaults to `True`: Automatically append the curses termination byte
     :param autoprint: bool: Defaults to `True`: Automatically pass the formatted string to `print()`
     :param clean: bool: Defaults to `False`: If set to True, all color tags will be removed to clean the string.
-    :param file: Defaults to `sys.stdout`: IO stream to print to. See `file` parameter for `print()`
+    :param file: io.TextIOWrapper: Defaults to `sys.stdout`: IO stream to print to. See `file` parameter for `print()`
     :return: str: The formatted string result
     """
     colours = {
