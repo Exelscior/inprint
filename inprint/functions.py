@@ -7,7 +7,7 @@ def iprint(
     autoprint: bool = True,
     clean: bool = False,
     file: "io.TextIOWrapper" = sys.stdout,
-):
+) -> str:
     """
     Utility function that provides interactive prints with unicode activated curses manipulation
 
