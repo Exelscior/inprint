@@ -19,7 +19,7 @@ class ColoursException(Exception):
     pass
 
 
-def colour(s, foreground=None, background=None, style=None):
+def colour(s, foreground: str = None, background: str = None, style: str = None) -> str:
     sgr = []
 
     if foreground:
@@ -53,7 +53,7 @@ def colour(s, foreground=None, background=None, style=None):
         return s
 
 
-def strip_color(s):
+def strip_color(s: str) -> str:
     return re.sub(r"\x1b\[.+?m", "", s)
 
 
