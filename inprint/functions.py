@@ -1,13 +1,12 @@
-import sys
 
 
 def iprint(
-    imput: str,
-    autoclose: bool = True,
-    autoprint: bool = True,
-    clean: bool = False,
-    file: "io.TextIOWrapper" = sys.stdout,
-) -> str:
+        imput: str,
+        autoclose: bool = True,
+        autoprint: str = True,
+        clean: bool = False,
+        **kwargs
+):
     """
     Utility function that provides interactive prints with unicode activated curses manipulation
 
@@ -22,7 +21,7 @@ def iprint(
     :param autoclose: bool: Defaults to `True`: Automatically append the curses termination byte
     :param autoprint: bool: Defaults to `True`: Automatically pass the formatted string to `print()`
     :param clean: bool: Defaults to `False`: If set to True, all color tags will be removed to clean the string.
-    :param file: io.TextIOWrapper: Defaults to `sys.stdout`: IO stream to print to. See `file` parameter for `print()`
+    :param kwargs: dict: All remaining arguments transparently passed on to the builtin. See parameters for `print()`
     :return: str: The formatted string result
     """
     colours = {
@@ -66,5 +65,5 @@ def iprint(
     if autoclose and not clean:
         imput += styles["reset"][1]
     if autoprint:
-        print(imput, file=file)
+        print(imput, **kwargs)
     return imput
