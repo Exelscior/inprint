@@ -3,7 +3,7 @@
 def iprint(
         imput: str,
         autoclose: bool = True,
-        autoprint: str = True,
+        autoprint: bool = True,
         clean: bool = False,
         **kwargs
 ):
